@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SIP Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="include/fontawesome/css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="content-nav">
+            <div class="logo">
+                <img src="Imagenes/Picture1.jpg">
+                <div class="line-logo"></div>
+            </div>
+            <div class="inner-nav">
+                <div class="nav-tools nav-left">
+                    <div class="nav-item notification responsive">
+                        <div class="inner-nav-item margin-left pointer noselect"><i class="fas fa-bell"></i></div>
+                    </div>
+                    <div class="nav-item setting">
+                        <div class="inner-nav-item margin-left pointer noselect"><i class="fas fa-cog"></i></div>
+                    </div>
+                    <div class="nav-item report">
+                        <div class="inner-nav-item margin-left pointer noselect"><i class="fas fa-flag"></i></div>
+                    </div>
+                </div>
+                <div class="nav-tools nav-right">
+                    <div class="nav-item margin-right responsive">
+                        <div class="inner-nav-text margin-right pointer noselect">Andres Dario</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="inner-nav-item margin-right avatar pointer noselect"
+                            style="background: url('Imagenes/personas.jpg');background-size:cover;background-position: center;">
+                        </div>
+                    </div>
+                    <div class="nav-item logout">
+                        <div class="inner-nav-item margin-right pointer noselect"><i class="fas fa-sign-out-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="linedown"></div>
+    </nav>
+    <div class="content hide-side">
+        <div class="side-content transition">
+            <div class="inner-side">
+                <div class="close-box-menu clearfix"> <i class="fas fa-angle-left btn-menu pointer noselect"></i> </div>
+                <div class="open-box-menu clearfix"> <i class="fas fa-angle-right btn-menu pointer noselect"></i> </div>
+                <div class="avatar"
+                    style="background: url('Imagenes/personas.jpg');background-size:cover;background-position: center;">
+                </div>
+                <div class="name-avatar">Andres Dario</div>
+                <div class="menu-content">
+                    <a href="index.html" target="_self">
+                        <div class="item-menu padding pointer noselect tooltip" data-tipped-options="position: 'right'"
+                            title="Diseño"><i class="fas icon-menu fa-home"></i>
+                            <div class="text-item-menu">Administrador</div>
+                        </div>
+                    </a>
+                    <a href="index2.html" target="_self">
+                        <div class="item-menu padding pointer noselect tooltip" data-tipped-options="position: 'right'"
+                            title="Entrada de datos"><i class="fas icon-menu fa-book"></i>
+                            <div class="text-item-menu">Inventario</div>
+                        </div>
+                    </a>
+                    <a href="index3.html" target="_self">
+                        <div class="item-menu padding pointer noselect tooltip" data-tipped-options="position: 'right'"
+                            title="Listas y selecciones"><i class="fas icon-menu fa-chart-bar"></i>
+                            <div class="text-item-menu">Ventas</div>
+                        </div>
+                    </a>
+                    <a href="index4.html" target="_self">
+                        <div class="item-menu padding pointer noselect tooltip" data-tipped-options="position: 'right'"
+                            title="Entrada de datos extensos"><i class="fas icon-menu fa-cogs"></i>
+                            <div class="text-item-menu">Utilidades</div>
+                        </div>
+                    </a>
+                    <a href="index5.html" target="_self">
+                        <div class="item-menu padding pointer noselect tooltip" data-tipped-options="position: 'right'"
+                            title="Layout 2"><i class="fas icon-menu fa-user"></i>
+                            <div class="text-item-menu"> Infromacion participantes</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-menu"><i class="fas fa-circle-notch fa-pulse fa-fw"></i> <span
+                    class="text-item-menu">Conectado</span></div>
+        </div>
+        <div class="inner-content clearfix">
+            <div class="col col50 row450">
+                <div class="inner-col texture col-fix">
+                    <div class="title-col">Calcular el valor de venta</div>
+                    <div class="inner-row">
+                        <div class="label-row">Valor de compra</div>
+                        <input type="text" placeholder="000" id="compra">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">% Utilidad o ganancia</div>
+                        <input type="text" placeholder="00%" id="utilidad">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">% IVA</div>
+                        <input type="text" placeholder="00%" id="iva">
+                    </div>
+                    <div class="inner-row">
+                        <div class="btn btn-save pointer noselect" onclick="Ventas();" value="Calucular">Calcular</div>
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Valor de venta $</div>
+                        <input type="text" placeholder="0.0" id="venta">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Ganancia $</div>
+                        <input type="text" placeholder="0.0" id="ganancia">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col50 row400">
+                <div class="inner-col texture col-fix">
+                    <div class="title-col">calcule el valor de resistencias eléctricas</div>
+                    <div class="inner-row">
+                        <div class="label-row">1° Banda</div>
+                        <select id="banda1" class="select2">
+                            <option value="">---Seleccione un color---</option>
+                            <option value="0">Negro</option>
+                            <option value="1">Cafe</option>
+                            <option value="2">Rojo</option>
+                            <option value="3">Naranja</option>
+                            <option value="4">Amarillo</option>
+                            <option value="5">Verde</option>
+                            <option value="6">Azul</option>
+                            <option value="7">Violeta</option>
+                            <option value="8">Gris</option>
+                            <option value="9">Blanco</option>
+                        </select>
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">2° Banda</div>
+                        <select id="banda2" class="select2">
+                                <option value="">---Seleccione un color---</option>
+                            <option value="0">Negro</option>
+                            <option value="1">Cafe</option>
+                            <option value="2">Rojo</option>
+                            <option value="3">Naranja</option>
+                            <option value="4">Amarillo</option>
+                            <option value="5">Verde</option>
+                            <option value="6">Azul</option>
+                            <option value="7">Violeta</option>
+                            <option value="8">Gris</option>
+                            <option value="9">Blanco</option>
+                        </select>
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">3° Banda</div>
+                        <select id="banda3" class="select2">
+                                <option value="">---Seleccione un color---</option>
+                            <option value="1">Negro</option>
+                            <option value="10">Cafe</option>
+                            <option value="100">Rojo</option>
+                            <option value="1000">Naranja</option>
+                            <option value="10000">Amarillo</option>
+                            <option value="100000">Verde</option>
+                            <option value="1000000">Azul</option>
+                            <option value="10000000">Violeta</option>
+                            <option value="100000000">Gris</option>
+                            <option value="1000000000">Blanco</option>
+                        </select>
+                    </div>
+                    <div class="inner-row">
+                        <div class="btn btn-save pointer noselect" onclick="ReOhmio();" value="Calucular">Calcular</div>
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Valor de resistencias en Ohmios</div>
+                        <input type="text" placeholder="0.0" id="ohmios">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>Tienda Tesla electronics  2019</footer>
+    </div>
+
+    <script src="include/fontawesome/js/all.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="include/tipped/css/tipped/tipped.css">
+    <script src="include/tipped/js/tipped/tipped.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="include/lightbox/css/lightbox.min.css">
+    <script src="include/lightbox/js/lightbox-plus-jquery.min.js"></script>
+    <script src="include/tabs/tabs.js"></script>
+    <link rel="stylesheet" href="include/tabs/tabs.css">
+    <script src="include/wicked/wickedpicker.min.js"></script>
+    <link rel="stylesheet" href="include/wicked/wickedpicker.min.css">
+    <script src="include/datepicker/datepicker.js"></script>
+    <link rel="stylesheet" href="include/datepicker/datepicker.css">
+    <script src="include/number/number.js"></script>
+    <link rel="stylesheet" href="include/number/number.css">
+    <script src="js/core.js"></script>
+    <script>
+        $(".close-box-menu").click(function () {
+            $(".content").addClass("hide-side");
+            localStorage.setItem("menu", ".close-box-menu");
+        });
+        $(".open-box-menu").click(function () {
+            $(".content").removeClass("hide-side");
+            localStorage.setItem("menu", ".open-box-menu");
+        });
+        let menuState = localStorage.getItem("menu");
+        if (menuState !== undefined) {
+            setTimeout(() => {
+                $(menuState).click();
+            }, 300);
+        }
+    </script>
+</body>
+<script>
+    function ReOhmio() {
+        var n1 = document.getElementById('banda1').value;
+        var n2 = document.getElementById('banda2').value;
+        var n3 = document.getElementById('banda3').value;
+       if(n1=='')
+       {
+           alert("Seleccione un color en la 1° Banda")
+       }
+       if(n2=='')
+       {
+           alert("Seleccione un color en la 2° Banda")
+       }
+       if(n3=='')
+       {
+           alert("Seleccione un color en la 3° Banda")
+       }
+       else
+       {
+        var valor = ((parseInt(n1)*10) + parseInt(n2))* parseInt(n3);
+        ohmios.value = valor;
+       }
+    }
+
+    function Ventas() {
+        var n1 = document.getElementById('compra').value;
+        var n2 = document.getElementById('utilidad').value;
+        var n3 = document.getElementById('iva').value;
+        if (n1 == '') {
+            alert("Debe diligenciar el campo de Valor de compra ")
+        }
+        if (n2 == '') {
+            alert("Debe diligenciar el campo de % Utilidad o ganancia ")
+        }
+        if (n3 == '') {
+            alert("Debe diligenciar el campo de Valor de % IVA")
+        }
+        else {
+            var valor = parseInt(n1) + (parseInt(n1) * (parseInt(n2) / 100)) + (parseInt(n1) * (parseInt(n3) / 100));
+            var gana = (parseInt(n1) * (parseInt(n2) / 100));
+
+            venta.value = valor;
+            ganancia.value = gana;
+        }
+    }
+</script>
+</html>

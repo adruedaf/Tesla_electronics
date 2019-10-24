@@ -1,0 +1,55 @@
+/* General Styles */
+/*
+color1: #61a60e
+color2: #007934
+color3: #c8c8c8
+color4: #76777a 
+complementario1 #132F31;
+complementario2 #0C7458;
+*/
+:root {
+    --color-uno: #61a60e;
+    --color-dos: #007934;
+    --color-tres: #c8c8c8;
+    --color-cuatro: #76777a ;
+    --com-uno: #132F31;
+    --com-dos: #0C7458;
+    --color-alert: #f44336;
+}
+/* Font Face */
+@font-face {
+font-family: 'Futura Book';
+font-style: normal;
+font-weight: normal;
+src: url("../assets/fonts/FuturaBook.woff");
+}
+@font-face {
+font-family: 'Helvetica';
+font-style: normal;
+font-weight: normal;
+src: url("../assets/fonts/helvetica-webfont.woff");
+}
+* {margin:0; padding:0;box-sizing: border-box;}
+* {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+a { color: var(--color-uno); text-decoration: none; }
+img {width:100%;}
+.pointer {cursor: pointer;}
+.noselect {user-select: none;}
+html {overflow: hidden;height: 100%;}
+body {font-family: 'Futura Book';font-size: 14px;}
+.transition {transition: 0.5s all;}
+.font-futura {font-family: 'Futura Book';}
+/* Clearfix */
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* Texture */
+.texture {background: white; !important;}
+/* Layouts */
+.margin {margin:10px;}
+.margin-left {margin-left: 10px;}
+.margin-right {margin-right: 10px;}
+.padding {padding:10px;}
+.padding-left {padding-left: 10px;}
+.padding-right {padding-right: 10px;}

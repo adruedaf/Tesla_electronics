@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SIP Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="include/fontawesome/css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="content-nav">
+            <div class="logo">
+                <img src="Imagenes/Picture1.jpg">
+                <div class="line-logo"></div>
+            </div>
+            <div class="inner-nav">
+                <div class="nav-tools nav-left">
+                    <div class="nav-item notification responsive">
+                        <div class="inner-nav-item margin-left pointer noselect"><i class="fas fa-bell"></i></div>
+                    </div>
+                    <div class="nav-item setting">
+                        <div class="inner-nav-item margin-left pointer noselect"><i class="fas fa-cog"></i></div>
+                    </div>
+                    <div class="nav-item report">
+                        <div class="inner-nav-item margin-left pointer noselect"><i class="fas fa-flag"></i></div>
+                    </div>
+                </div>
+                <div class="nav-tools nav-right">
+                    <div class="nav-item margin-right responsive">
+                        <div class="inner-nav-text margin-right pointer noselect">Andres Dario</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="inner-nav-item margin-right avatar pointer noselect"
+                            style="background: url('Imagenes/personas.jpg');background-size:cover;background-position: center;">
+                        </div>
+                    </div>
+                    <div class="nav-item logout">
+                        <div class="inner-nav-item margin-right pointer noselect"><i class="fas fa-sign-out-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="linedown"></div>
+    </nav>
+    <div class="content hide-side">
+        <div class="side-content transition">
+            <div class="inner-side">
+                <div class="close-box-menu clearfix"> <i class="fas fa-angle-left btn-menu pointer noselect"></i> </div>
+                <div class="open-box-menu clearfix"> <i class="fas fa-angle-right btn-menu pointer noselect"></i> </div>
+                <div class="avatar"
+                    style="background: url('Imagenes/personas.jpg');background-size:cover;background-position: center;">
+                </div>
+                <div class="name-avatar">Andres Dario</div>
+                <div class="menu-content">
+                    <a href="index.html" target="_self">
+                        <div class="item-menu padding pointer noselect tooltip" data-tipped-options="position: 'right'"
+                            title="Diseño"><i class="fas icon-menu fa-home"></i>
+                            <div class="text-item-menu">Administrador</div>
+                        </div>
+                    </a>
+                    <a href="index2.html" target="_self">
+                        <div class="item-menu padding pointer noselect tooltip" data-tipped-options="position: 'right'"
+                            title="Entrada de datos"><i class="fas icon-menu fa-book"></i>
+                            <div class="text-item-menu">Inventario</div>
+                        </div>
+                    </a>
+                    <a href="index3.html" target="_self">
+                        <div class="item-menu padding pointer noselect tooltip" data-tipped-options="position: 'right'"
+                            title="Listas y selecciones"><i class="fas icon-menu fa-chart-bar"></i>
+                            <div class="text-item-menu">Ventas</div>
+                        </div>
+                    </a>
+                    <a href="index4.html" target="_self">
+                        <div class="item-menu padding pointer noselect tooltip" data-tipped-options="position: 'right'"
+                            title="Entrada de datos extensos"><i class="fas icon-menu fa-cogs"></i>
+                            <div class="text-item-menu">Utilidades</div>
+                        </div>
+                    </a>
+                    <a href="index5.html" target="_self">
+                        <div class="item-menu padding pointer noselect tooltip" data-tipped-options="position: 'right'"
+                            title="Layout 2"><i class="fas icon-menu fa-user"></i>
+                            <div class="text-item-menu"> Infromacion participantes</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-menu"><i class="fas fa-circle-notch fa-pulse fa-fw"></i> <span
+                    class="text-item-menu">Conectado</span></div>
+        </div>
+        <div class="inner-content clearfix">
+            <div class="col col50 row400">
+                <div class="inner-col texture col-fix">
+                    <div class="title-col">Formulario de creación producto</div>
+                    <div class="inner-row">
+                        <div class="label-row">Código de producto</div>
+                        <input type="text" placeholder="Código de producto" id="compra">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Nombre de producto</div>
+                        <input type="text" placeholder="Nombre de producto" id="utilidad">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Marca del producto</div>
+                        <input type="text" placeholder="Marca del producto" id="iva">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Precio de compra</div>
+                        <input type="text" placeholder="Precio de compra" id="iva">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Cantidad comprada</div>
+                        <input type="text" placeholder="Cantidad comprada" id="iva">
+                    </div>
+                    <div class="inner-row">
+                        <div class="btn btn-save pointer noselect" onclick="Ventas();" value="Calucular">Guardar
+                            producto</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col50 row400">
+                <div class="inner-col texture col-fix">
+                    <div class="title-col">Actualizar un producto </div>
+                    <div class="inner-row">
+                        <div class="label-row">Código de producto</div>
+                        <input type="text" placeholder="Código de producto" id="compra">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Nombre de producto</div>
+                        <input type="text" placeholder="Nombre de producto" id="utilidad">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Marca del producto</div>
+                        <input type="text" placeholder="Marca del producto" id="iva">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Precio de compra</div>
+                        <input type="text" placeholder="Precio de compra" id="iva">
+                    </div>
+                    <div class="inner-row">
+                        <div class="label-row">Cantidad comprada</div>
+                        <input type="text" placeholder="Cantidad comprada" id="iva">
+                    </div>
+                    <div class="inner-row">
+                        <div class="btn btn-save pointer noselect" onclick="Ventas();" value="Calucular">Actualizar
+                            producto</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col100 row300">
+                <div class="inner-col texture clearfix col-fix">
+                    <div class="title-col">Consultar y eliminar un producto </div>
+                    <table class="egt">
+                        <tr>
+                            <th>Código de producto</th>
+                            <th>Nombre de producto</th>
+                            <th>Marca del producto</th>
+                            <th>Precio de compra</th>
+                            <th>Cantidad comprada</th>
+                            <th colspan="2">Consultar</th>
+                            
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>Pinza Punta y Corte, 4-5/8"</td>
+                            <td>Foy</td>
+                            <td>5000</td>
+                            <td>3</td>
+                            <td>
+                                <div class="btn btn-save">Eliminar</div>
+                            </td>
+                            <td>
+                                <div class="btn btn-save">Consultar</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer>Tienda Tesla electronics 2019</footer>
+    </div>
+
+    <script src="include/fontawesome/js/all.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="include/tipped/css/tipped/tipped.css">
+    <script src="include/tipped/js/tipped/tipped.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="include/lightbox/css/lightbox.min.css">
+    <script src="include/lightbox/js/lightbox-plus-jquery.min.js"></script>
+    <script src="include/tabs/tabs.js"></script>
+    <link rel="stylesheet" href="include/tabs/tabs.css">
+    <script src="include/wicked/wickedpicker.min.js"></script>
+    <link rel="stylesheet" href="include/wicked/wickedpicker.min.css">
+    <script src="include/datepicker/datepicker.js"></script>
+    <link rel="stylesheet" href="include/datepicker/datepicker.css">
+    <script src="include/number/number.js"></script>
+    <link rel="stylesheet" href="include/number/number.css">
+    <script src="js/core.js"></script>
+    <script>
+        $(".close-box-menu").click(function () {
+            $(".content").addClass("hide-side");
+            localStorage.setItem("menu", ".close-box-menu");
+        });
+        $(".open-box-menu").click(function () {
+            $(".content").removeClass("hide-side");
+            localStorage.setItem("menu", ".open-box-menu");
+        });
+        let menuState = localStorage.getItem("menu");
+        if (menuState !== undefined) {
+            setTimeout(() => {
+                $(menuState).click();
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
